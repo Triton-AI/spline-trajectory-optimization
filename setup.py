@@ -127,16 +127,16 @@ setup(
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/discussions/install-requires-vs-requirements/
     install_requires=[
-        "numpy",
-        "matplotlib",
-        "shapely",
-        "pyyaml",
-        "tk",
-        "importlib_resources",
+        "numpy>=1.24,<2.0",  # Pin to numpy 1.x for bezier compatibility
+        "matplotlib>=3.9,<4.0",
+        "shapely>=2.0",
+        "pyyaml>=6.0",
+        "tk>=0.1.0",
+        "bezier>=2023.7.28",
+        "importlib_resources>=6.5",
         "pytest",
-        "shapely",
         "scipy",
-        "casadi",
+        "casadi==3.6.4",
     ],  # Optional
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
