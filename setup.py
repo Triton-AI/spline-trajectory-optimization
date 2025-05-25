@@ -136,7 +136,7 @@ setup(
         "importlib_resources>=6.5",
         "pytest",
         "scipy",
-        "casadi==3.6.4",
+        "casadi==3.6.0",
     ],  # Optional
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
