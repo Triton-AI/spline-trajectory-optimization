@@ -158,25 +158,25 @@ def set_up_double_track_problem(params):
         print(dr)
         
         
-        # marginR = model["vehicle_width"] / 2.0 + model["safety_margin_r"]
-        # marginL = model["vehicle_width"] / 2.0 + model["safety_margin_l"]
+        marginR = model["vehicle_width"] / 2.0 + model["safety_margin_r"]
+        marginL = model["vehicle_width"] / 2.0 + model["safety_margin_l"]
         
-        track_width = dl - dr
-        line = " "
-        if(line == "lower"):
-            safety_margin_r = track_width/2 + 1.0
-            safety_margin_l =  model["safety_margin_l"]
+        # track_width = dl - dr
+        # line = " "
+        # if(line == "lower"):
+        #     safety_margin_r = track_width/2 + 1.0
+        #     safety_margin_l =  model["safety_margin_l"]
             
-        elif(line == "higher"):
-            safety_margin_r = model["safety_margin_r"]
-            safety_margin_l = track_width/2 + 1.0
+        # elif(line == "higher"):
+        #     safety_margin_r = model["safety_margin_r"]
+        #     safety_margin_l = track_width/2 + 1.0
             
-        else:
-            safety_margin_r = model["safety_margin_r"]*(-(np.sin(bank)))
-            safety_margin_l = model["safety_margin_l"]*np.cos(bank)
+        # else:
+        #     safety_margin_r = model["safety_margin_r"]*(-(np.sin(bank)))
+        #     safety_margin_l = model["safety_margin_l"]*np.cos(bank)
      
-        marginR = model["vehicle_width"] / 2.0 + safety_margin_r #negative bank is ccw around track
-        marginL = model["vehicle_width"] / 2.0 + safety_margin_l
+        # marginR = model["vehicle_width"] / 2.0 + safety_margin_r #negative bank is ccw around track
+        # marginL = model["vehicle_width"] / 2.0 + safety_margin_l
 
         
         assert dr + marginR < dl - marginL, f"Track width must be wider than vehicle width plus 2 * safety margin at point {i}."
